@@ -8,7 +8,6 @@
 @15 annotate start-experiment
 
 @30 share_local
-@45 share_subset_sum
 
 @1:00 exercise_1 10
 @1:30 print_local_value

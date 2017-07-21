@@ -30,6 +30,7 @@ class BenalohCommunity(Community):
         # Collect responses
         self.subset_sum = self.my_secret_share
         self.total_sum = 0
+        self.n-=1 # We do not send a message to ourselves
 
     def initiate_conversions(self):
         return [DefaultConversion(self), BenalohCommunityConversion(self)]
@@ -64,8 +65,11 @@ class BenalohCommunity(Community):
 
     def on_local_share(self, messages):
         for message in messages:
+            self.n-=1 # hack to
             self.subset_sum += message.payload.value
             self.subset_sum %= self.modulus
+            if self.n == 0:
+                self.share_subset_sum()
 
     def on_broadcast_share(self, messages):
         for message in messages:

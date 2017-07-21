@@ -60,4 +60,4 @@ class BenalohModule(CommunityExperimentModule):
 
     @experiment_callback
     def exercise_1(self, val):
-        print "My inc'ed val is", val+1
+        print "My inc'ed val is", int(val)+1
