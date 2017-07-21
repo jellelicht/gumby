@@ -17,7 +17,7 @@ class BenalohCommunity(Community):
         super(BenalohCommunity, self).__init__(dispersy, master_member, my_member)
 
         self.modulus = 1000
-        self.n = 5
+        self.n = 6
         self.my_secret_share = random.randint(0, self.modulus-1)
 
         # Generate random values
