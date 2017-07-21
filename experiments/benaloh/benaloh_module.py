@@ -57,3 +57,7 @@ class BenalohModule(CommunityExperimentModule):
     @experiment_callback
     def print_total_sum(self):
         print "My computed sum is", self.community.total_sum
+
+    @experiment_callback
+    def exercise_1(self, val):
+        print "My inc'ed val is", val+1
